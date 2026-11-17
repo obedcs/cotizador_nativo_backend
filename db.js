@@ -1,7 +1,7 @@
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
-const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQL_ROOT_PASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}`;
+const urlDB = 'mysql://root:BaukXWbSNzyqfLGmmXjQCCCvlNjKYNHg@mysql.railway.internal:3306/railway';
 
 const pool = mysql.createPool({urlDB});
 
