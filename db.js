@@ -3,6 +3,6 @@ require('dotenv').config();
 
 const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQL_ROOT_PASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}`;
 
-const pool = mysql.createConnection(urlDB);
+const pool = mysql.createPool({urlDB});
 
 module.exports = pool;
